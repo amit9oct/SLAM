@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1395</width>
+    <height>787</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MRXT: Multi-Robot eXploration Tool (ARVC-UMH)</string>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>684</width>
+         <height>667</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="mapLabel">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>No simulation environment loaded</string>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QScrollArea" name="scrollArea_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>683</width>
+         <height>667</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="slamMapLabel">
+          <property name="text">
+           <string>No created map</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Num. Robots</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>5</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="randomPosesButton">
+         <property name="text">
+          <string>Random Poses</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>x: 0.00 m</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>y: 0.00 m</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>zoom:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="zoomSlider">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>20</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="playButton">
+         <property name="text">
+          <string>&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="stopButton">
+         <property name="text">
+          <string>||</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Elapsed Time</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="timeDisplay">
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>7</number>
+         </property>
+         <property name="mode">
+          <enum>QLCDNumber::Dec</enum>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+         <property name="value" stdset="0">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1395</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSimulator">
+    <property name="title">
+     <string>Simulation</string>
+    </property>
+    <addaction name="actionPlay"/>
+    <addaction name="actionStop"/>
+    <addaction name="actionReset"/>
+    <addaction name="separator"/>
+    <addaction name="actionSaveVmap"/>
+    <addaction name="actionSaveOmap"/>
+    <addaction name="actionSaveSLAMlog"/>
+    <addaction name="actionSaveGTlog"/>
+   </widget>
+   <widget class="QMenu" name="menuExploration">
+    <property name="title">
+     <string>Exploration</string>
+    </property>
+    <widget class="QMenu" name="menuExploration_Strategy">
+     <property name="title">
+      <string>Exploration strategy</string>
+     </property>
+     <addaction name="actionNearest_Frontier"/>
+     <addaction name="actionCost_Utility"/>
+     <addaction name="actionMarket_Based"/>
+     <addaction name="actionBehaviour_Based"/>
+     <addaction name="actionCoordinated"/>
+     <addaction name="actionIntegrated"/>
+     <addaction name="actionHybrid"/>
+    </widget>
+    <widget class="QMenu" name="menuSLAM_Algorithm">
+     <property name="title">
+      <string>SLAM algorithm</string>
+     </property>
+     <addaction name="actionEKF"/>
+     <addaction name="actionRBPF"/>
+    </widget>
+    <addaction name="menuExploration_Strategy"/>
+    <addaction name="menuSLAM_Algorithm"/>
+    <addaction name="separator"/>
+    <addaction name="actionStrategy_options"/>
+    <addaction name="actionSLAM_options"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_Scenario"/>
+    <addaction name="actionOpen_Scenario"/>
+    <addaction name="actionSave_Scenario"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionSceneProperties"/>
+    <addaction name="actionRobotSettings"/>
+    <addaction name="separator"/>
+    <addaction name="actionConfiguration"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuExploration"/>
+   <addaction name="menuSimulator"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionPlay">
+   <property name="text">
+    <string>Play</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
+  <action name="actionOpen_Scenario">
+   <property name="text">
+    <string>Open Scenario...</string>
+   </property>
+  </action>
+  <action name="actionSave_Scenario">
+   <property name="text">
+    <string>Save Scenario...</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionSceneProperties">
+   <property name="text">
+    <string>Scene properties...</string>
+   </property>
+  </action>
+  <action name="actionRobotSettings">
+   <property name="text">
+    <string>Robot settings...</string>
+   </property>
+  </action>
+  <action name="actionNearest_Frontier">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Nearest Frontier</string>
+   </property>
+  </action>
+  <action name="actionCost_Utility">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Cost-Utility</string>
+   </property>
+  </action>
+  <action name="actionMarket_Based">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Market-Based</string>
+   </property>
+  </action>
+  <action name="actionBehaviour_Based">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Behaviour-Based</string>
+   </property>
+  </action>
+  <action name="actionHybrid">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Hybrid</string>
+   </property>
+  </action>
+  <action name="actionCoordinated">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Coordinated</string>
+   </property>
+  </action>
+  <action name="actionIntegrated">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Integrated</string>
+   </property>
+  </action>
+  <action name="actionEKF">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>EKF</string>
+   </property>
+  </action>
+  <action name="actionRBPF">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>RBPF</string>
+   </property>
+  </action>
+  <action name="actionSaveVmap">
+   <property name="text">
+    <string>Save Landmarks Map as...</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About...</string>
+   </property>
+  </action>
+  <action name="actionConfiguration">
+   <property name="text">
+    <string>Configuration...</string>
+   </property>
+  </action>
+  <action name="actionStrategy_options">
+   <property name="text">
+    <string>Strategy options...</string>
+   </property>
+  </action>
+  <action name="actionSLAM_options">
+   <property name="text">
+    <string>SLAM options...</string>
+   </property>
+  </action>
+  <action name="actionNew_Scenario">
+   <property name="text">
+    <string>New Scenario...</string>
+   </property>
+  </action>
+  <action name="actionSaveOmap">
+   <property name="text">
+    <string>Save Occupancy Grid Map as...</string>
+   </property>
+  </action>
+  <action name="actionSaveSLAMlog">
+   <property name="text">
+    <string>Save SLAM log as ...</string>
+   </property>
+  </action>
+  <action name="actionSaveGTlog">
+   <property name="text">
+    <string>Save Ground Truth log as...</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

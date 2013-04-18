@@ -1,0 +1,2623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StrategyOptionsDialog</class>
+ <widget class="QDialog" name="StrategyOptionsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>734</width>
+    <height>490</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Strategy Options</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="2" column="0">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="NFTab">
+      <attribute name="title">
+       <string>Nearest Frontier</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_15">
+       <item row="0" column="0">
+        <widget class="QToolBox" name="NFToolBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="HDLTab_7">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>694</width>
+            <height>326</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Deliberative Layer</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_16">
+           <item row="2" column="2">
+            <widget class="QDoubleSpinBox" name="NFRPSpinBox"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_146">
+             <property name="text">
+              <string>Inflate obstacles</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_145">
+             <property name="text">
+              <string>Replanning Period</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLabel" name="label_152">
+             <property name="text">
+              <string>seconds</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QLabel" name="label_153">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QSpinBox" name="NFIOSpinBox"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="RLHTab_7">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>694</width>
+            <height>326</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Low Level Controller</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_14">
+           <item row="5" column="1">
+            <widget class="QLabel" name="label_117">
+             <property name="text">
+              <string>Avoid Obstacles</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QDoubleSpinBox" name="NFOSSpinBox"/>
+           </item>
+           <item row="5" column="3">
+            <widget class="QDoubleSpinBox" name="NFOASpinBox"/>
+           </item>
+           <item row="11" column="2">
+            <spacer name="verticalSpacer_14">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLabel" name="label_124">
+             <property name="text">
+              <string>Follow Path</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QDoubleSpinBox" name="NFGSSpinBox"/>
+           </item>
+           <item row="6" column="3">
+            <widget class="QDoubleSpinBox" name="NFGASpinBox"/>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLabel" name="label_109">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Width (m)</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QLabel" name="label_110">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Weight</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <spacer name="verticalSpacer_13">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="8" column="1">
+            <widget class="QLabel" name="label_122">
+             <property name="text">
+              <string>Local Potencial Width</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QLabel" name="label_125">
+             <property name="text">
+              <string>Local Potencial Height</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="2">
+            <widget class="QSpinBox" name="NFLPWSpinBox"/>
+           </item>
+           <item row="10" column="2">
+            <widget class="QSpinBox" name="NFLPHSpinBox"/>
+           </item>
+           <item row="10" column="3">
+            <widget class="QLabel" name="label_126">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="3">
+            <widget class="QLabel" name="label_123">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="6">
+            <widget class="QDoubleSpinBox" name="NFK2SpinBox"/>
+           </item>
+           <item row="10" column="5">
+            <widget class="QLabel" name="label_120">
+             <property name="text">
+              <string>K2</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="5">
+            <widget class="QLabel" name="label_118">
+             <property name="text">
+              <string>K1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="6">
+            <widget class="QDoubleSpinBox" name="NFK1SpinBox"/>
+           </item>
+           <item row="6" column="6">
+            <widget class="QDoubleSpinBox" name="NFWMAXSpinBox"/>
+           </item>
+           <item row="6" column="7">
+            <widget class="QLabel" name="label_116">
+             <property name="text">
+              <string>rad/s</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="5">
+            <widget class="QLabel" name="label_115">
+             <property name="text">
+              <string>WMax</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="5">
+            <widget class="QLabel" name="label_112">
+             <property name="text">
+              <string>VMax</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="6">
+            <widget class="QDoubleSpinBox" name="NFVMAXSpinBox"/>
+           </item>
+           <item row="5" column="7">
+            <widget class="QLabel" name="label_113">
+             <property name="text">
+              <string>m/s</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="8">
+            <spacer name="horizontalSpacer_20">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="5" column="0">
+            <spacer name="horizontalSpacer_19">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="5" column="4">
+            <spacer name="horizontalSpacer_21">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="CTab">
+      <attribute name="title">
+       <string>Coordinated</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_9">
+       <item row="0" column="0">
+        <widget class="QToolBox" name="CToolBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="HDLTab_4">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>694</width>
+            <height>326</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Deliberative Layer</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_19">
+           <item row="0" column="2">
+            <widget class="QDoubleSpinBox" name="CRPSpinBox"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_142">
+             <property name="text">
+              <string>Replanning Period</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_131">
+             <property name="text">
+              <string>Influence Radius</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QDoubleSpinBox" name="CIRSpinBox"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_149">
+             <property name="text">
+              <string>Inflate obstacles</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="label_154">
+             <property name="text">
+              <string>seconds</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="label_155">
+             <property name="text">
+              <string>meters</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLabel" name="label_156">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QSpinBox" name="CIOSpinBox"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="RLHTab_4">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>694</width>
+            <height>326</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Low Level Controller</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_55">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Width (m)</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="label_56">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Weight</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="5">
+            <widget class="QLabel" name="label_58">
+             <property name="text">
+              <string>VMax</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="6">
+            <widget class="QDoubleSpinBox" name="CVMAXSpinBox"/>
+           </item>
+           <item row="2" column="7">
+            <widget class="QLabel" name="label_59">
+             <property name="text">
+              <string>m/s</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="5">
+            <widget class="QLabel" name="label_61">
+             <property name="text">
+              <string>WMax</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="6">
+            <widget class="QDoubleSpinBox" name="CWMAXSpinBox"/>
+           </item>
+           <item row="3" column="7">
+            <widget class="QLabel" name="label_62">
+             <property name="text">
+              <string>rad/s</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="5">
+            <widget class="QLabel" name="label_64">
+             <property name="text">
+              <string>K1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="6">
+            <widget class="QDoubleSpinBox" name="CK1SpinBox"/>
+           </item>
+           <item row="6" column="5">
+            <widget class="QLabel" name="label_66">
+             <property name="text">
+              <string>K2</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="6">
+            <widget class="QDoubleSpinBox" name="CK2SpinBox"/>
+           </item>
+           <item row="0" column="2">
+            <spacer name="verticalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0">
+            <spacer name="horizontalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="11" column="2">
+            <spacer name="verticalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="8">
+            <spacer name="horizontalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="4">
+            <spacer name="horizontalSpacer_12">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="label_63">
+             <property name="text">
+              <string>Avoid Obstacles</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QDoubleSpinBox" name="COSSpinBox"/>
+           </item>
+           <item row="2" column="3">
+            <widget class="QDoubleSpinBox" name="COASpinBox"/>
+           </item>
+           <item row="3" column="3">
+            <widget class="QDoubleSpinBox" name="CGASpinBox"/>
+           </item>
+           <item row="3" column="2">
+            <widget class="QDoubleSpinBox" name="CGSSpinBox"/>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="label_70">
+             <property name="text">
+              <string>Follow Path</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLabel" name="label_68">
+             <property name="text">
+              <string>Local Potencial Width</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLabel" name="label_71">
+             <property name="text">
+              <string>Local Potencial Height</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QSpinBox" name="CLPHSpinBox"/>
+           </item>
+           <item row="5" column="2">
+            <widget class="QSpinBox" name="CLPWSpinBox"/>
+           </item>
+           <item row="5" column="3">
+            <widget class="QLabel" name="label_69">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="QLabel" name="label_72">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="CUTab">
+      <attribute name="title">
+       <string>Cost-Utlity</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_13">
+       <item row="0" column="0">
+        <widget class="QToolBox" name="CUToolBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="HDLTab_6">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>694</width>
+            <height>326</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Deliberative Layer</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_17">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_144">
+             <property name="text">
+              <string>Replanning Period</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QDoubleSpinBox" name="CURPSpinBox"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_147">
+             <property name="text">
+              <string>Inflate obstacles</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_132">
+             <property name="text">
+              <string>Utility Radius</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QDoubleSpinBox" name="CUUWSpinBox"/>
+           </item>
+           <item row="2" column="1">
+            <widget class="QDoubleSpinBox" name="CUURSpinBox"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_133">
+             <property name="text">
+              <string>Cost Weight</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QDoubleSpinBox" name="CUCWSpinBox"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_134">
+             <property name="text">
+              <string>Utility Weight</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_157">
+             <property name="text">
+              <string>seconds</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_158">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="label_159">
+             <property name="text">
+              <string>meters</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="CUIOSpinBox"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="RLHTab_6">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>694</width>
+            <height>326</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Low Level Controller</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_12">
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_91">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Width (m)</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="label_92">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Weight</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="5">
+            <widget class="QLabel" name="label_94">
+             <property name="text">
+              <string>VMax</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="6">
+            <widget class="QDoubleSpinBox" name="CUVMAXSpinBox"/>
+           </item>
+           <item row="2" column="7">
+            <widget class="QLabel" name="label_95">
+             <property name="text">
+              <string>m/s</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="5">
+            <widget class="QLabel" name="label_97">
+             <property name="text">
+              <string>WMax</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="6">
+            <widget class="QDoubleSpinBox" name="CUWMAXSpinBox"/>
+           </item>
+           <item row="3" column="7">
+            <widget class="QLabel" name="label_98">
+             <property name="text">
+              <string>rad/s</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="5">
+            <widget class="QLabel" name="label_100">
+             <property name="text">
+              <string>K1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="6">
+            <widget class="QDoubleSpinBox" name="CUK1SpinBox"/>
+           </item>
+           <item row="6" column="5">
+            <widget class="QLabel" name="label_102">
+             <property name="text">
+              <string>K2</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="6">
+            <widget class="QDoubleSpinBox" name="CUK2SpinBox"/>
+           </item>
+           <item row="0" column="2">
+            <spacer name="verticalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0">
+            <spacer name="horizontalSpacer_16">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="11" column="2">
+            <spacer name="verticalSpacer_12">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="8">
+            <spacer name="horizontalSpacer_17">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="4">
+            <spacer name="horizontalSpacer_18">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="label_99">
+             <property name="text">
+              <string>Avoid Obstacles</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QDoubleSpinBox" name="CUOSSpinBox"/>
+           </item>
+           <item row="2" column="3">
+            <widget class="QDoubleSpinBox" name="CUOASpinBox"/>
+           </item>
+           <item row="3" column="3">
+            <widget class="QDoubleSpinBox" name="CUGASpinBox"/>
+           </item>
+           <item row="3" column="2">
+            <widget class="QDoubleSpinBox" name="CUGSSpinBox"/>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="label_106">
+             <property name="text">
+              <string>Follow Path</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLabel" name="label_104">
+             <property name="text">
+              <string>Local Potencial Width</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLabel" name="label_107">
+             <property name="text">
+              <string>Local Potencial Height</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QSpinBox" name="CULPWSpinBox"/>
+           </item>
+           <item row="6" column="2">
+            <widget class="QSpinBox" name="CULPHSpinBox"/>
+           </item>
+           <item row="5" column="3">
+            <widget class="QLabel" name="label_105">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="QLabel" name="label_108">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="MBTab">
+      <attribute name="title">
+       <string>Market Based</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_11">
+       <item row="0" column="0">
+        <widget class="QToolBox" name="MBToolBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="HDLTab_5">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>694</width>
+            <height>326</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Deliberative Layer</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_18">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_143">
+             <property name="text">
+              <string>Replanning Period</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_139">
+             <property name="text">
+              <string>Cost Weight</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QDoubleSpinBox" name="MBCWSpinBox"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_148">
+             <property name="text">
+              <string>Inflate obstacles</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_138">
+             <property name="text">
+              <string>Utility Weight</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QDoubleSpinBox" name="MBUWSpinBox"/>
+           </item>
+           <item row="0" column="1">
+            <widget class="QDoubleSpinBox" name="MBRPSpinBox"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_130">
+             <property name="text">
+              <string>Utility Radius</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QDoubleSpinBox" name="MBURSpinBox"/>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_160">
+             <property name="text">
+              <string>seconds</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="label_161">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLabel" name="label_162">
+             <property name="text">
+              <string>meters</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="MBIOSpinBox"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="RLHTab_5">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>694</width>
+            <height>326</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Low Level Controller</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_10">
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_73">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Width (m)</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="label_74">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Weight</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="5">
+            <widget class="QLabel" name="label_76">
+             <property name="text">
+              <string>VMax</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="6">
+            <widget class="QDoubleSpinBox" name="MBVMAXSpinBox"/>
+           </item>
+           <item row="2" column="7">
+            <widget class="QLabel" name="label_77">
+             <property name="text">
+              <string>m/s</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="5">
+            <widget class="QLabel" name="label_79">
+             <property name="text">
+              <string>WMax</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="6">
+            <widget class="QDoubleSpinBox" name="MBWMAXSpinBox"/>
+           </item>
+           <item row="3" column="7">
+            <widget class="QLabel" name="label_80">
+             <property name="text">
+              <string>rad/s</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="5">
+            <widget class="QLabel" name="label_82">
+             <property name="text">
+              <string>K1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="6">
+            <widget class="QDoubleSpinBox" name="MBK1SpinBox"/>
+           </item>
+           <item row="6" column="5">
+            <widget class="QLabel" name="label_84">
+             <property name="text">
+              <string>K2</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="6">
+            <widget class="QDoubleSpinBox" name="MBK2SpinBox"/>
+           </item>
+           <item row="0" column="2">
+            <spacer name="verticalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0">
+            <spacer name="horizontalSpacer_13">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="11" column="2">
+            <spacer name="verticalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="8">
+            <spacer name="horizontalSpacer_14">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="4">
+            <spacer name="horizontalSpacer_15">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="label_81">
+             <property name="text">
+              <string>Avoid Obstacles</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QDoubleSpinBox" name="MBOSSpinBox"/>
+           </item>
+           <item row="2" column="3">
+            <widget class="QDoubleSpinBox" name="MBOASpinBox"/>
+           </item>
+           <item row="3" column="3">
+            <widget class="QDoubleSpinBox" name="MBGASpinBox"/>
+           </item>
+           <item row="3" column="2">
+            <widget class="QDoubleSpinBox" name="MBGSSpinBox"/>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="label_88">
+             <property name="text">
+              <string>Follow Path</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLabel" name="label_86">
+             <property name="text">
+              <string>Local Potencial Width</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLabel" name="label_89">
+             <property name="text">
+              <string>Local Potencial Height</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QSpinBox" name="MBLPWSpinBox"/>
+           </item>
+           <item row="6" column="2">
+            <widget class="QSpinBox" name="MBLPHSpinBox"/>
+           </item>
+           <item row="5" column="3">
+            <widget class="QLabel" name="label_87">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="QLabel" name="label_90">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="ITab">
+      <attribute name="title">
+       <string>Integrated</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <widget class="QToolBox" name="IToolBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="HDLTab_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>694</width>
+            <height>326</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Deliberative Layer</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_21">
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_129">
+             <property name="text">
+              <string>Utility Radius</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QDoubleSpinBox" name="ICWSpinBox"/>
+           </item>
+           <item row="2" column="1">
+            <widget class="QDoubleSpinBox" name="IURSpinBox"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_135">
+             <property name="text">
+              <string>Cost Weight</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QDoubleSpinBox" name="IRPSpinBox"/>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_163">
+             <property name="text">
+              <string>seconds</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_136">
+             <property name="text">
+              <string>Utility Weight</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QDoubleSpinBox" name="IUWSpinBox"/>
+           </item>
+           <item row="5" column="1">
+            <widget class="QDoubleSpinBox" name="ILWSpinBox"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_141">
+             <property name="text">
+              <string>Replanning Period</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_137">
+             <property name="text">
+              <string>Localization Weight</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="label_164">
+             <property name="text">
+              <string>meters</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_150">
+             <property name="text">
+              <string>Inflate obstacles</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_165">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="IIOSpinBox"/>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_119">
+             <property name="text">
+              <string>Information FIlter Max Landmark Distance</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QDoubleSpinBox" name="ICRSpinBox"/>
+           </item>
+           <item row="6" column="2">
+            <widget class="QLabel" name="label_121">
+             <property name="text">
+              <string>meters</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="RLHTab_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>694</width>
+            <height>326</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Low Level Controller</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_19">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Width (m)</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="label_20">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Weight</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="5">
+            <widget class="QLabel" name="label_22">
+             <property name="text">
+              <string>VMax</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="6">
+            <widget class="QDoubleSpinBox" name="IVMAXSpinBox"/>
+           </item>
+           <item row="2" column="7">
+            <widget class="QLabel" name="label_23">
+             <property name="text">
+              <string>m/s</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="5">
+            <widget class="QLabel" name="label_25">
+             <property name="text">
+              <string>WMax</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="6">
+            <widget class="QDoubleSpinBox" name="IWMAXSpinBox"/>
+           </item>
+           <item row="3" column="7">
+            <widget class="QLabel" name="label_26">
+             <property name="text">
+              <string>rad/s</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="5">
+            <widget class="QLabel" name="label_28">
+             <property name="text">
+              <string>K1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="6">
+            <widget class="QDoubleSpinBox" name="IK1SpinBox"/>
+           </item>
+           <item row="6" column="5">
+            <widget class="QLabel" name="label_30">
+             <property name="text">
+              <string>K2</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="6">
+            <widget class="QDoubleSpinBox" name="IK2SpinBox"/>
+           </item>
+           <item row="0" column="2">
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0">
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="11" column="2">
+            <spacer name="verticalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="8">
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="4">
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="label_27">
+             <property name="text">
+              <string>Avoid Obstacles</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QDoubleSpinBox" name="IOSSpinBox"/>
+           </item>
+           <item row="2" column="3">
+            <widget class="QDoubleSpinBox" name="IOASpinBox"/>
+           </item>
+           <item row="3" column="3">
+            <widget class="QDoubleSpinBox" name="IGASpinBox"/>
+           </item>
+           <item row="3" column="2">
+            <widget class="QDoubleSpinBox" name="IGSSpinBox"/>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="label_34">
+             <property name="text">
+              <string>Follow Path</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLabel" name="label_32">
+             <property name="text">
+              <string>Local Potencial Width</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLabel" name="label_35">
+             <property name="text">
+              <string>Local Potencial Height</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QSpinBox" name="ILPWSpinBox"/>
+           </item>
+           <item row="6" column="2">
+            <widget class="QSpinBox" name="ILPHSpinBox"/>
+           </item>
+           <item row="5" column="3">
+            <widget class="QLabel" name="label_33">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="QLabel" name="label_36">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="BBTab">
+      <attribute name="title">
+       <string>Behaviour-Based</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_7">
+       <item row="0" column="0">
+        <widget class="QToolBox" name="BBToolBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="HDLTab_3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>694</width>
+            <height>326</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Finite State Automata</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_20">
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_111">
+             <property name="text">
+              <string>Local Minima Recovey Route - Inflate Obstacles</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QSpinBox" name="BBIOSpinBox"/>
+           </item>
+           <item row="4" column="2">
+            <widget class="QLabel" name="label_114">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="3">
+            <widget class="QCheckBox" name="BBCBIntegrated">
+             <property name="text">
+              <string>Return to Past Precise Poses when needed</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="3">
+            <widget class="QCheckBox" name="BBCBEscapeActivated">
+             <property name="text">
+              <string>Escape from local Minima</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="3">
+            <widget class="QLabel" name="label_151">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Set-up localization thresholds in the SLAM parameters &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;window in order to adjust the integration with the SLAM &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="RLHTab_3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>694</width>
+            <height>326</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Reactive Layer</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="11" column="1">
+            <widget class="QCheckBox" name="BBUseESZCB">
+             <property name="text">
+              <string>Limit to ESZ</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="8">
+            <widget class="QLabel" name="label_41">
+             <property name="text">
+              <string>m/s</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="4">
+            <widget class="QDoubleSpinBox" name="BBUASpinBox"/>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="label_37">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Width (m)</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QLabel" name="label_38">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Weight</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="label_39">
+             <property name="text">
+              <string>Go to Frontiers</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QDoubleSpinBox" name="BBFSSpinBox"/>
+           </item>
+           <item row="2" column="4">
+            <widget class="QDoubleSpinBox" name="BBFASpinBox"/>
+           </item>
+           <item row="2" column="6">
+            <widget class="QLabel" name="label_40">
+             <property name="text">
+              <string>VMax</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="7">
+            <widget class="QDoubleSpinBox" name="BBVMAXSpinBox"/>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="label_42">
+             <property name="text">
+              <string>Go to Unexplored Zones</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QDoubleSpinBox" name="BBUSSpinBox"/>
+           </item>
+           <item row="3" column="6">
+            <widget class="QLabel" name="label_43">
+             <property name="text">
+              <string>WMax</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="7">
+            <widget class="QDoubleSpinBox" name="BBWMAXSpinBox"/>
+           </item>
+           <item row="3" column="8">
+            <widget class="QLabel" name="label_44">
+             <property name="text">
+              <string>rad/s</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLabel" name="label_45">
+             <property name="text">
+              <string>Avoid Obstacles</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QDoubleSpinBox" name="BBOSSpinBox"/>
+           </item>
+           <item row="5" column="4">
+            <widget class="QDoubleSpinBox" name="BBOASpinBox"/>
+           </item>
+           <item row="5" column="6">
+            <widget class="QLabel" name="label_46">
+             <property name="text">
+              <string>K1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="7">
+            <widget class="QDoubleSpinBox" name="BBK1SpinBox"/>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLabel" name="label_47">
+             <property name="text">
+              <string>Avoid Other Robots</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="QDoubleSpinBox" name="BBRSSpinBox"/>
+           </item>
+           <item row="6" column="4">
+            <widget class="QDoubleSpinBox" name="BBRASpinBox"/>
+           </item>
+           <item row="6" column="6">
+            <widget class="QLabel" name="label_48">
+             <property name="text">
+              <string>K2</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="7">
+            <widget class="QDoubleSpinBox" name="BBK2SpinBox"/>
+           </item>
+           <item row="8" column="1">
+            <widget class="QLabel" name="label_49">
+             <property name="text">
+              <string>Go to Precise Areas</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="3">
+            <widget class="QDoubleSpinBox" name="BBPSSpinBox"/>
+           </item>
+           <item row="8" column="4">
+            <widget class="QDoubleSpinBox" name="BBPASpinBox"/>
+           </item>
+           <item row="8" column="6">
+            <widget class="QLabel" name="label_50">
+             <property name="text">
+              <string>Local Potencial Width</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="7">
+            <widget class="QSpinBox" name="BBLPWSpinBox"/>
+           </item>
+           <item row="8" column="8">
+            <widget class="QLabel" name="label_51">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QLabel" name="label_52">
+             <property name="text">
+              <string>Follow Escape Route</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="3">
+            <widget class="QDoubleSpinBox" name="BBGSSpinBox"/>
+           </item>
+           <item row="10" column="4">
+            <widget class="QDoubleSpinBox" name="BBGASpinBox"/>
+           </item>
+           <item row="10" column="6">
+            <widget class="QLabel" name="label_53">
+             <property name="text">
+              <string>Local Potencial Height</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="7">
+            <widget class="QSpinBox" name="BBLPHSpinBox"/>
+           </item>
+           <item row="10" column="8">
+            <widget class="QLabel" name="label_54">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <spacer name="verticalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0">
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="13" column="3">
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="9">
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="5">
+            <spacer name="horizontalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="11" column="3">
+            <widget class="QLabel" name="label_178">
+             <property name="text">
+              <string>ESZ Radius</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="3">
+            <widget class="QLabel" name="label_179">
+             <property name="text">
+              <string>ESZ Dilation</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="4">
+            <widget class="QDoubleSpinBox" name="BBESZRadiusSpinBox"/>
+           </item>
+           <item row="12" column="4">
+            <widget class="QSpinBox" name="BBESZDilationSpinBox"/>
+           </item>
+           <item row="11" column="5">
+            <widget class="QLabel" name="label_180">
+             <property name="text">
+              <string>meters</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="5">
+            <widget class="QLabel" name="label_181">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="HTab">
+      <attribute name="title">
+       <string>Hybrid</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="0">
+        <widget class="QToolBox" name="HToolBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="HDLTab">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>694</width>
+            <height>326</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Deliberative Layer</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_22">
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_128">
+             <property name="text">
+              <string>Associated Node Area Dilation</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QDoubleSpinBox" name="HTreeDilationSpinBox"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_127">
+             <property name="text">
+              <string>Associated Node Area Radius</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QDoubleSpinBox" name="HTreeRadiusSpinBox"/>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_166">
+             <property name="text">
+              <string>meters</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="label_167">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0" colspan="3">
+            <widget class="QLabel" name="label_140">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Set-up localization thresholds in the SLAM parameters &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;window in order to adjust the integration with the SLAM &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_168">
+             <property name="text">
+              <string>Minimum Frontier Length</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QSpinBox" name="HMFLSpinBox"/>
+           </item>
+           <item row="4" column="2">
+            <widget class="QLabel" name="label_171">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_169">
+             <property name="text">
+              <string>Minimum Gateway Length</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLabel" name="label_170">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QSpinBox" name="HMGLSpinBox"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_172">
+             <property name="text">
+              <string>Utility Radius</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QDoubleSpinBox" name="HURSpinBox"/>
+           </item>
+           <item row="5" column="2">
+            <widget class="QLabel" name="label_173">
+             <property name="text">
+              <string>meters</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="RLHTab">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>694</width>
+            <height>326</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Reactive Layer</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_8">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Width (m)</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="label_9">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Weight</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Go to Frontiers</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QDoubleSpinBox" name="HFSSpinBox"/>
+           </item>
+           <item row="2" column="3">
+            <widget class="QDoubleSpinBox" name="HFASpinBox"/>
+           </item>
+           <item row="2" column="5">
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>VMax</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="6">
+            <widget class="QDoubleSpinBox" name="HVMAXSpinBox"/>
+           </item>
+           <item row="2" column="7">
+            <widget class="QLabel" name="label_15">
+             <property name="text">
+              <string>m/s</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Go to Unexplored Zones</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QDoubleSpinBox" name="HUSSpinBox"/>
+           </item>
+           <item row="3" column="3">
+            <widget class="QDoubleSpinBox" name="HUASpinBox"/>
+           </item>
+           <item row="3" column="5">
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>WMax</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="6">
+            <widget class="QDoubleSpinBox" name="HWMAXSpinBox"/>
+           </item>
+           <item row="3" column="7">
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>rad/s</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Avoid Obstacles</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QDoubleSpinBox" name="HOSSpinBox"/>
+           </item>
+           <item row="5" column="3">
+            <widget class="QDoubleSpinBox" name="HOASpinBox"/>
+           </item>
+           <item row="5" column="5">
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>K1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="6">
+            <widget class="QDoubleSpinBox" name="HK1SpinBox"/>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Avoid Other Robots</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QDoubleSpinBox" name="HRSSpinBox"/>
+           </item>
+           <item row="6" column="3">
+            <widget class="QDoubleSpinBox" name="HRASpinBox"/>
+           </item>
+           <item row="6" column="5">
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>K2</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="6">
+            <widget class="QDoubleSpinBox" name="HK2SpinBox"/>
+           </item>
+           <item row="8" column="1">
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Go to Precise Areas</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="2">
+            <widget class="QDoubleSpinBox" name="HPSSpinBox"/>
+           </item>
+           <item row="8" column="3">
+            <widget class="QDoubleSpinBox" name="HPASpinBox"/>
+           </item>
+           <item row="8" column="5">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Local Potencial Width</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="6">
+            <widget class="QSpinBox" name="HLPWSpinBox"/>
+           </item>
+           <item row="8" column="7">
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>Go To Gateway</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="2">
+            <widget class="QDoubleSpinBox" name="HGSSpinBox"/>
+           </item>
+           <item row="10" column="3">
+            <widget class="QDoubleSpinBox" name="HGASpinBox"/>
+           </item>
+           <item row="10" column="5">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>Local Potencial Height</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="6">
+            <widget class="QSpinBox" name="HLPHSpinBox"/>
+           </item>
+           <item row="10" column="7">
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="14" column="2">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="8">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="4">
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="11" column="2">
+            <widget class="QLabel" name="label_174">
+             <property name="text">
+              <string>ESZ Radius</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <widget class="QCheckBox" name="HUseESZCB">
+             <property name="text">
+              <string>Limit to ESZ</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="3">
+            <widget class="QDoubleSpinBox" name="HESZRadiusSpinBox"/>
+           </item>
+           <item row="12" column="3">
+            <widget class="QDoubleSpinBox" name="HESZDilationSpinBox"/>
+           </item>
+           <item row="12" column="2">
+            <widget class="QLabel" name="label_175">
+             <property name="text">
+              <string>ESZ Dilation</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="4">
+            <widget class="QLabel" name="label_176">
+             <property name="text">
+              <string>meters</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="4">
+            <widget class="QLabel" name="label_177">
+             <property name="text">
+              <string>cells</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>StrategyOptionsDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>StrategyOptionsDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

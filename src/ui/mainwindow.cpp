@@ -82,11 +82,13 @@ MainWindow::MainWindow(QWidget *parent) :
 	changeStrategy();
 	
     	QActionGroup* slamTechniquesGroup = new QActionGroup(this);
-	slamTechniquesGroup->addAction(actionEKF);
 	slamTechniquesGroup->addAction(actionRBPF);
+	slamTechniquesGroup->addAction(actionEKF);
+	slamTechniquesGroup->addAction(actionEKF2);
 	slamTechniquesGroup->setExclusive(true);
-       	if (slamConf->read<int>("SLAM")==1) actionEKF->setChecked(true);
        	if (slamConf->read<int>("SLAM")==0) actionRBPF->setChecked(true);
+       	else if (slamConf->read<int>("SLAM")==1) actionEKF->setChecked(true);
+       	else if (slamConf->read<int>("SLAM")==2) actionEKF2->setChecked(true);
 	actionSaveVmap->setEnabled(false);
 	actionSaveOmap->setEnabled(false);
 	actionSaveSLAMlog->setEnabled(false);
@@ -101,6 +103,7 @@ MainWindow::MainWindow(QWidget *parent) :
 	connect( actionCoordinated, SIGNAL(triggered(bool)), this, SLOT(changeStrategy(bool)));
 	connect( actionIntegrated, SIGNAL(triggered(bool)), this, SLOT(changeStrategy(bool)));
 	connect( actionEKF, SIGNAL(triggered(bool)), this, SLOT(changeSlam(bool)));
+	connect( actionEKF2, SIGNAL(triggered(bool)), this, SLOT(changeSlam(bool)));
 	connect( actionRBPF, SIGNAL(triggered(bool)), this, SLOT(changeSlam(bool)));
 
 	playButton->setDefaultAction(actionPlay);
@@ -584,8 +587,9 @@ void MainWindow::openSLAMOptSetDiag(bool){
 		slamDiag.yOriginSpinBox->setValue(slamConf->read<double>("YORIGIN"));
 		slamDiag.widthSpinBox->setValue(slamConf->read<double>("SCENE_WIDTH"));
 		slamDiag.heightSpinBox->setValue(slamConf->read<double>("SCENE_HEIGHT"));
-		slamDiag.EKFRadioButton->setChecked((slamConf->read<int>("SLAM")==1));
 		slamDiag.RBPFRadioButton->setChecked((slamConf->read<int>("SLAM")==0));
+		slamDiag.EKFRadioButton->setChecked((slamConf->read<int>("SLAM")==1));
+		slamDiag.EKF2RadioButton->setChecked((slamConf->read<int>("SLAM")==2));
 		slamDiag.particlesSpinBox->setValue(slamConf->read<int>("PARTICLESPERROBOT"));
 		slamDiag.MultiplyPerRobotsCheckBox->setChecked(slamConf->read<bool>("MULTIPLYPARTPERROBOTS"));
 		slamDiag.MahalanobisThSpinBox->setValue(slamConf->read<double>("MAHALANOBISTH"));
@@ -603,13 +607,17 @@ void MainWindow::openSLAMOptSetDiag(bool){
 			slamConf->add<double>("YORIGIN", slamDiag.yOriginSpinBox->value());
 			slamConf->add<double>("SCENE_WIDTH", slamDiag.widthSpinBox->value());
 			slamConf->add<double>("SCENE_HEIGHT", slamDiag.heightSpinBox->value());
-			if (slamDiag.EKFRadioButton->isChecked()){
-				slamConf->add<int>("SLAM", 1);
-				actionEKF->setChecked(true);
-			}
 			if (slamDiag.RBPFRadioButton->isChecked()){
 				slamConf->add<int>("SLAM", 0);
 				actionRBPF->setChecked(true);
+			}
+			else if (slamDiag.EKFRadioButton->isChecked()){
+				slamConf->add<int>("SLAM", 1);
+				actionEKF->setChecked(true);
+			}
+			else if (slamDiag.EKF2RadioButton->isChecked()){
+				slamConf->add<int>("SLAM", 2);
+				actionEKF2->setChecked(true);
 			}
 			slamConf->add<int>("PARTICLESPERROBOT", slamDiag.particlesSpinBox->value());
 			slamConf->add<bool>("MULTIPLYPARTPERROBOTS", slamDiag.MultiplyPerRobotsCheckBox->isChecked());
@@ -744,12 +752,15 @@ void MainWindow::randomPoses(bool){
 }
 
 void MainWindow::changeSlam(bool){
-	if (actionEKF->isChecked()){
-		slamConf->add<int>("SLAM", 1);
-	}
-	else  if (actionRBPF->isChecked()){
+	if (actionRBPF->isChecked()){
 		slamConf->add<int>("SLAM", 0);
 	}	
+	else if (actionEKF->isChecked()){
+		slamConf->add<int>("SLAM", 1);
+	}
+	else if (actionEKF2->isChecked()){
+		slamConf->add<int>("SLAM", 2);
+	}
 }
 
 

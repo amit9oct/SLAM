@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>625</width>
-    <height>436</height>
+    <width>655</width>
+    <height>464</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -196,54 +196,7 @@ p, li { white-space: pre-wrap; }
       <bool>false</bool>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="0" colspan="3">
-       <widget class="QRadioButton" name="EKFRadioButton">
-        <property name="text">
-         <string>Select EKF as SLAM Algorithm</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-        <property name="autoRepeat">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0" colspan="3">
-       <widget class="QRadioButton" name="RBPFRadioButton">
-        <property name="text">
-         <string>Select RBPF as SLAM Algorithm</string>
-        </property>
-        <property name="autoRepeat">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="label">
-        <property name="text">
-         <string>Particles</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QSpinBox" name="particlesSpinBox">
-        <property name="minimum">
-         <number>1</number>
-        </property>
-        <property name="maximum">
-         <number>2000</number>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="2">
-       <widget class="QCheckBox" name="MultiplyPerRobotsCheckBox">
-        <property name="text">
-         <string>Multiply by Number of Robots</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0" colspan="3">
+      <item row="4" column="0" colspan="3">
        <widget class="QGroupBox" name="groupBox_3">
         <property name="title">
          <string>Data Association</string>
@@ -301,6 +254,60 @@ p, li { white-space: pre-wrap; }
           </widget>
          </item>
         </layout>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="3">
+       <widget class="QRadioButton" name="EKFRadioButton">
+        <property name="text">
+         <string>Select EKF as SLAM Algorithm</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="3">
+       <widget class="QRadioButton" name="RBPFRadioButton">
+        <property name="text">
+         <string>Select RBPF as SLAM Algorithm</string>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Particles</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QSpinBox" name="particlesSpinBox">
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>2000</number>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QCheckBox" name="MultiplyPerRobotsCheckBox">
+        <property name="text">
+         <string>Multiply by Number of Robots</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="3">
+       <widget class="QRadioButton" name="EKF2RadioButton">
+        <property name="text">
+         <string>Select EKF without odometry as SLAM Algorithm</string>
+        </property>
        </widget>
       </item>
      </layout>

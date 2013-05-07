@@ -848,6 +848,8 @@ void simulatedModel::motionSample(const pose& lastPose, const pose& newPose, con
 	float diffy = newPose.y-lastPose.y;
 	float diffx = newPose.x-lastPose.x;
 	float diffth = newPose.th-lastPose.th;
+	if (diffth>M_PI)			diffth -= PIx2;
+	else if (diffth <= -M_PI)		diffth += PIx2;
 	if (!(diffx == 0 && diffy == 0 && diffth ==0)){ 
 		float deltarot1;
 		//if (!(fabs(diffx) < 0.000001 && fabs(diffy) < 0.000001))

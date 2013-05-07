@@ -41,7 +41,7 @@
          <x>0</x>
          <y>0</y>
          <width>684</width>
-         <height>667</height>
+         <height>665</height>
         </rect>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -94,7 +94,7 @@
          <x>0</x>
          <y>0</y>
          <width>683</width>
-         <height>667</height>
+         <height>665</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -276,6 +276,7 @@
       <string>SLAM algorithm</string>
      </property>
      <addaction name="actionEKF"/>
+     <addaction name="actionEKF2"/>
      <addaction name="actionRBPF"/>
     </widget>
     <addaction name="menuExploration_Strategy"/>
@@ -480,6 +481,14 @@
   <action name="actionSaveGTlog">
    <property name="text">
     <string>Save Ground Truth log as...</string>
+   </property>
+  </action>
+  <action name="actionEKF2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>EKF-2</string>
    </property>
   </action>
  </widget>

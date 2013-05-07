@@ -76,6 +76,7 @@ HEADERS += include/model/robotBase.h \
            include/architecture/planner/auxiliar/pathPlanning.h \
            include/architecture/planner/auxiliar/treeNode.h \
            include/architecture/slam/mapbuilders/EKFilter.h \
+           include/architecture/slam/mapbuilders/EKFilterVel.h \
            include/architecture/slam/mapbuilders/particle.h \
            include/architecture/slam/mapbuilders/RBPFilter.h \
            include/architecture/slam/mapbuilders/vslamFilter.h \
@@ -116,6 +117,7 @@ SOURCES += src/mrxt.cpp \
            src/architecture/planner/auxiliar/pathPlanning.cpp \
            src/architecture/planner/auxiliar/treeNode.cpp \
            src/architecture/slam/mapbuilders/EKFilter.cpp \
+           src/architecture/slam/mapbuilders/EKFilterVel.cpp \
            src/architecture/slam/mapbuilders/particle.cpp \
            src/architecture/slam/mapbuilders/RBPFilter.cpp \
            src/architecture/slam/mapbuilders/vslamFilter.cpp \

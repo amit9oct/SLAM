@@ -10,8 +10,8 @@ pos3d base2global(const pos3d& base, const pose& pos){
 	float costh = (float)cos(pos.th);
 	float sinth = (float)sin(pos.th);
 	return pos3d(	costh * base.getX() - sinth * base.getY() + pos.x,
-					sinth * base.getX() + costh * base.getY() + pos.y,
-					base.getZ());
+			sinth * base.getX() + costh * base.getY() + pos.y,
+			base.getZ());
 }
 
 pos3d global2base(const pos3d& global, const pose& pos){

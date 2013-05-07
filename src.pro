@@ -156,6 +156,7 @@ unix {
   maps.files += maps/scene1.jpg
   maps.files += maps/scene2.jpg
   maps.files += maps/scene1.map
+  maps.files += maps/scene1-600.map
   maps.files += maps/scene2.map
   maps.files += maps/scene1.omap
   maps.files += maps/scene2.omap

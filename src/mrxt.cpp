@@ -32,6 +32,7 @@ int main(int argc, char **argv)
 		currentfolder.mkdir("outfiles");
 
 		QFile::copy( "/usr/share/mrxt/maps/scene1.map", QDir::homePath()+="/.mrxt/maps/scene1.map");
+		QFile::copy( "/usr/share/mrxt/maps/scene1-600.map", QDir::homePath()+="/.mrxt/maps/scene1-600.map");
 		QFile::copy( "/usr/share/mrxt/maps/scene1.omap", QDir::homePath()+="/.mrxt/maps/scene1.omap");
 		QFile::copy( "/usr/share/mrxt/maps/scene1.jpg", QDir::homePath()+="/.mrxt/maps/scene1.jpg");
 		QFile::copy( "/usr/share/mrxt/maps/scene2.map", QDir::homePath()+="/.mrxt/maps/scene2.map");

@@ -435,7 +435,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>RBPF</string>
+    <string>FastSLAM 1</string>
    </property>
   </action>
   <action name="actionSaveVmap">
@@ -488,7 +488,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>EKF-2</string>
+    <string>EKF (no odometry)</string>
    </property>
   </action>
  </widget>

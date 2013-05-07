@@ -272,7 +272,7 @@ p, li { white-space: pre-wrap; }
       <item row="2" column="0" colspan="3">
        <widget class="QRadioButton" name="RBPFRadioButton">
         <property name="text">
-         <string>Select RBPF as SLAM Algorithm</string>
+         <string>Select FastSLAM 1.0 as SLAM Algorithm</string>
         </property>
         <property name="autoRepeat">
          <bool>false</bool>

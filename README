@@ -1,9 +1,19 @@
-To install it:
+It has been tested in Ubuntu 12.04.
+
+Requirements:
+
+- Qt4
+- Loki
+- OpenCV
+
+
+To install MRXT:
 
 qmake
 make
 make install
 
-To execute it:
+
+To run MRXT:
 
 mrxt

@@ -1,0 +1,9 @@
+To install it:
+
+qmake
+make
+make install
+
+To execute it:
+
+mrxt
